@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>CRUD (mongo) - Entry Page</title>
+    </head>
+    <body>
+        <center>
+            <h1 style='color:blue'>--* UPDATE  PAGE *--</h1>
+            <hr>
+            <form action='/user/update' method='POST'>
+            <table border='2px'>
+                <tr>
+                    <th>S id</th>
+                    <td><input type='hidden' name='email' value='<%= email%>'><%= email%></td>
+                
+                </tr>
+
+                <tr>
+                    <th>Name : </th>
+                    <td><input type='text' name='username' value='<%= username%>'></td>
+                </tr>
+
+                <tr>
+                    <th colspan='2'>
+                        <button type='submit'>Update</button>
+                    </th>
+                </tr>
+            </table>
+        </form>
+        </center>
+    </body>
+</html>

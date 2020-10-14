@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>User Login</title>
+    </head>
+    <body>
+        <center>
+            <h1>User Login</h1>
+
+            <br>
+            <a href='/'>Home</a>
+            <hr><br><br>
+
+            <table border='2px' cellspacing='3px' cellpadding='4px'>
+                <form action='/user/login' method='POST'>
+                
+                <tr>
+                    <th>Email : </th>
+                    <td><input type='email' name='email'></td>
+                </tr>
+
+                <tr>
+                    <th>Password : </th>
+                    <td><input type='password' name='password'></td>
+                </tr>
+
+                <tr>
+                    <td colspan='2'><center><input type='submit' value='Log In'></center></td>
+                </tr>
+                </form>
+            </table>
+
+            <br><hr><br><br>
+
+            <p> If you not registered 
+                <a href='/user/signup_page'>Sign Up</a>
+            </p>
+        </center>
+    </body>
+</html>

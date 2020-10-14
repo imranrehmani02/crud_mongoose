@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Show Page</title>
+    </head>
+    <body>
+        
+
+<center>
+    <h1 style='color:blue'>--* SHOW  PAGE *--</h1>
+    <hr>
+    <h4>Hello,  <%= email%></h4>
+    <a href='/user/logout'><span style='color:chocolate'>Logout</span></a> &nbsp; &nbsp;
+    <hr>
+
+    <h2>User Table</h2>
+
+    <table border='3px' cellpadding='6px' cellspacing=3px>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th colspan='2'><center>Action</center></th>
+        </tr>
+
+        <% result.forEach(function(rec)
+        {
+            %>
+        <tr>
+            <td><%= rec.username %></td>
+            <td><%= rec.email %></td>
+            <td>
+                <a href="/user/delete?email=<%= rec.email %>">Delete</a>
+            </td>
+            <td>
+                <a href="/user/update_req?email=<%= rec.email%>&username=<%= rec.username%>">Update</a>
+            </td>
+        </tr>
+        <% }) %>
+
+    </table>
+</center>
+
+</body>
+</html>
