@@ -7,17 +7,16 @@ const cors = require('cors');
 const path = require('path');
 const port = process.env.PORT;
 const database = require('./database');
-const userController = require('./controllers/user');
+const userRouter = require('./routes/user.routes');
 
 const app = express();
 
 app.set('view engine','ejs');
 
 //middleware setup
-
 app.use(morgan('dev'));
 app.use(cors());
-app.use('/user',userController);
+app.use('/user',userRouter);
 app.use(express.static(path.join(__dirname,'assets')))
 
 //defaults routes
