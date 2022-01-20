@@ -1,17 +1,21 @@
 <html>
-    <head>
-        <title>CRUD (mongo) - Entry Page</title>
-    </head>
-    <body>
-        <center>
-            <h1 style='color:blue'>--* UPDATE  PAGE *--</h1>
-            <hr>
-            <form action='/user/update' method='POST'>
+
+<head>
+    <title>CRUD (mongo) - Entry Page</title>
+</head>
+
+<body>
+    <center>
+        <h1 style='color:blue'> UPDATE PAGE </h1>
+        <hr>
+        <form action='/user/update' method='POST'>
             <table border='2px'>
                 <tr>
                     <th>S id</th>
-                    <td><input type='hidden' name='email' value='<%= email%>'><%= email%></td>
-                
+                    <td><input type='hidden' name='email' value='<%= email%>'>
+                        <%= email%>
+                    </td>
+
                 </tr>
 
                 <tr>
@@ -26,6 +30,7 @@
                 </tr>
             </table>
         </form>
-        </center>
-    </body>
+    </center>
+</body>
+
 </html>

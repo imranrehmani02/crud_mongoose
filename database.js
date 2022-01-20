@@ -9,17 +9,18 @@ const db_url = process.env.DB_URL;
 
 mongoose.connect(db_url,
     {
-        useNewUrlParser:true,
-        useUnifiedTopology:true,
-        useCreateIndex:true
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useCreateIndex: true
     },
-    function(error,link)
-    {
+    function (error, link) {
         //check error
-        assert.equal(error,null,'DB connection error');
+        assert.equal(error, null, 'DB connection error');
 
         //ok
-
         console.log('DB connection success');
         //console.log(link);
     })
+
+const db = mongoose.connection
+module.exports = db
